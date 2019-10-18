@@ -7,6 +7,11 @@ public class StudentList
 	{
 
 //		Check arguments
+		if(args ==null || args.length!=1) {
+			System.out.println("please enter a|r|c| +WORD | ? WORD");
+			return;
+		}
+		}
 		if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try
@@ -86,7 +91,8 @@ public class StudentList
 			char a[] = D.toCharArray();			
 			boolean in_word = false;
 			int count=0;
-			for(char c:a) {
+			for(char c:a)
+			{
 				if(c ==' ') 
 				{
 					if (!in_word) {	count++; in_word =true;
